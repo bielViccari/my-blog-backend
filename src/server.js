@@ -5,7 +5,7 @@ import { db, connectToDb } from './db.js' //create your db file and connect to y
 
 //lendo as informações de auth do firebase
 const credentials = JSON.parse(
-    fs.readFileSync('../credential.json')
+    fs.readFileSync("./credentials.json")
 )
 
 //iniciando o firebase no backend com as credenciais do firebase
@@ -43,6 +43,14 @@ app.get('/api/articles/:name', async (req,res) => {
         res.json(article)
     } else {
         res.sendStatus(404)
+    }
+})
+
+app.use((req, res, next) => {
+    if(req.user) {
+        next()
+    } else {
+        res.sendStatus(401)
     }
 })
 

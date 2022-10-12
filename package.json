@@ -1,7 +1,6 @@
 {
   "name": "backend-reactblog",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,5 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bielViccari/my-blog-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bielViccari/my-blog-backend/issues"
+  },
+  "homepage": "https://github.com/bielViccari/my-blog-backend#readme",
+  "description": ""
 }
